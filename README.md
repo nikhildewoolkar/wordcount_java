@@ -1,0 +1,3 @@
+# wordcount_java
+Wordcount assignment RedHat
+For this program first i read link which was provided to me. i didnt download it just read it. i used Regex to clean the data because it was having so many symbolic characters as well as i made each and every word lowercase so that it should not count words twice(ex. Nikhil, nikhil). Then i used Hashmap to keep word count. after getting whole count i applied threshold value and using that figured out top frequency words and counted % for the same and then used JavaFX for graph visualization There is one more file as Chart.css to give colours to pie chart.
