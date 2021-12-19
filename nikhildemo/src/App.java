@@ -46,18 +46,23 @@ file.close();
                 .forEachOrdered(x -> temp.put(x.getKey(), x.getValue()));
         App.words=temp;
         System.out.println(App.words);
-        System.out.println(App.words.size());
+        System.out.println("Data gathered:-");
+        System.out.println("Total unique words present are:- "+App.words.size());
         Integer totalWords =0 ;
         Map<String,Double> wordsPercent=new HashMap<String, Double>();
         Iterator<Map.Entry< String, Integer> >iterator = App.words.entrySet().iterator();
          while (iterator.hasNext()) {
             Map.Entry< String, Integer> entry = iterator.next();
             totalWords += entry.getValue();}
-        System.out.println(totalWords);
+        System.out.println("Total words present are:- "+totalWords);
         iterator = App.words.entrySet().iterator();
+        System.out.println("The percentage graph is based on this data:- ");
         while (iterator.hasNext()) {
             Map.Entry< String, Integer> entry = iterator.next();
+            if(entry.getValue()>100){
+                System.out.println("Word:- "+entry.getKey()+", Count:-"+entry.getValue()+", Percentaage:-"+(entry.getValue()/Double.valueOf(totalWords))*100);
             wordsPercent.put(entry.getKey(), (entry.getValue()/Double.valueOf(totalWords))*100);}
+        }
             System.out.println("wordsPercent");
             System.out.println(wordsPercent);
 
